@@ -3,7 +3,7 @@ name: Deploy React App to Kubernetes with ArgoCD
 on:
   push:
     branches:
-      - "**"
+      - main
 
 jobs:
   build:
