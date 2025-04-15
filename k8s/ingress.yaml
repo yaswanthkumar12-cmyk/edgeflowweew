@@ -2,11 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: react-app-ingress
+  namespace: edgeflow
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: your-app-domain.com
+    - host: react-app.local
       http:
         paths:
           - path: /
@@ -15,5 +16,4 @@ spec:
               service:
                 name: react-app-service
                 port:
-                  number: 80
----
+                  number: 3000
