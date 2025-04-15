@@ -2,10 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: react-app
-  labels:
-    app: react-app
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: react-app
@@ -16,7 +14,7 @@ spec:
     spec:
       containers:
         - name: react-app
-          image: yaswanthkumar12/react-app:latest
+          image: yaswanthkumar12/react-app:a13c7ebf2c26c6d3f79fb6e5b7fc59723ec6ea6c  # Image from Docker Hub
           ports:
             - containerPort: 80
 ---
