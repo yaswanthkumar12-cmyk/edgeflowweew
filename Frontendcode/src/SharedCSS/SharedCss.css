@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Varela+Round&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*html {*/
+/*  font-size: 62.5%;*/
+/*}*/
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+}
+a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 800;
+
+}
+#color-rediect{
+  color: red;
+}
+.redirect-message{
+  color: mediumseagreen;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+          "wdth" 87.5,
+          "YTLC" 450;
+}
+.error-message{
+  /*padding-top: 3px;*/
+  color: #d34444;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+          "wdth" 87.5,
+          "YTLC" 450;
+  font-size: 15px;
+}
+.container {
+  display: grid;
+  grid-template-rows: minmax(min-content, 100vh);
+  grid-template-columns: repeat(2, 50vw);
+}
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 800;
+
+}
+.heading-primary {
+  font-size: 5rem;
+}
+.span-blue {
+  color: #28608c;
+}
+.signup-container,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.signup-container {
+  width: 100vw;
+  padding: 1rem 10rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+.signup-form {
+  max-width: 45rem;
+  width: 100%;
+}
+.text-mute {
+  color: #807d7d;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+          "wdth" 87.5,
+          "YTLC" 477;
+}
+
+.input-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.8rem;
+  padding: 3rem 5rem 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background: #eee;
+  width: 100%;
+
+}
+.input-text:focus {
+  outline-color: gray;
+}
+
+.btn {
+  padding: 2rem 3rem;
+  border: none;
+  background: #28608c;
+  color: #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: inherit;
+}
+.btn-login {
+  align-self: flex-end;
+  width: 100%;
+  margin-top: 2rem;
+  box-shadow: 0 5px 5px #00000020;
+}
+.btn-login:active {
+  box-shadow: none;
+}
+.btn-login:hover {
+  background: #3f7ab6;
+}
+.inp {
+  position: relative;
+
+}
+.label {
+  pointer-events: none;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: #00000070;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.2s;
+  transform-origin: left;
+}
+.input-text:not(:placeholder-shown) + .label,
+.input-text:focus + .label {
+  top: 0.7rem;
+  transform: scale(0.75);
+}
+.input-text:focus + .label {
+  color: #3f7ab6;
+  font-weight: 700;
+
+}
+
+/*.input-icon {*/
+/*  position: absolute;*/
+/*  top: 2rem;*/
+/*  right: 2rem;*/
+/*  font-size: 2rem;*/
+/*  color: #00000070;*/
+/*}*/
+/*.input-icon-password {*/
+/*  cursor: pointer;*/
+/*}*/
+
+.line-breaker span:nth-child(2) {
+  margin: 0 2rem;
+}
+
+.welcome-container {
+  background: #eeeeee75;
+  grid-column: 2 / 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10rem;
+}
+.lg {
+  font-size: 6rem;
+}
+.welcome-container img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 54.5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .signup-container {
+    padding: 5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 48.5%;
+  }
+
+  .input-text:not(:placeholder-shown) + .label,
+  .input-text:focus + .label {
+    top: 0.6rem;
+    transform: scale(0.75);
+  }
+  .label {
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .signup-container {
+    grid-column: 1 / 3;
+    grid-row: 1/3;
+  }
+  .welcome-container {
+    display: none;
+  }
+}
+
+
+.privacy_policy
+{
+  font-size: 1.5rem;
+  color: #a29b9b;
+  font-weight: 500;
+  max-width: 28rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.privacy_policy span{
+  color: #3f7ab6;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
