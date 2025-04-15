@@ -2,11 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: react-app-service
+  namespace: edgeflow
 spec:
   selector:
     app: react-app
   ports:
     - protocol: TCP
-      port: 3000         # Changed the exposed port to 3000
-      targetPort: 3000   # Changed the target port to 3000
-  type: LoadBalancer
+      port: 3000       # Port you want to expose externally
+      targetPort: 80   # Container port defined in pod spec
+  type: NodePort       # Use NodePort for Minikube access
