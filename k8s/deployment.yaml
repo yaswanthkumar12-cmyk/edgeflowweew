@@ -16,5 +16,5 @@ spec:
         - name: react-app
           image: yaswanthkumar12/react-app:a13c7ebf2c26c6d3f79fb6e5b7fc59723ec6ea6c  # Image from Docker Hub
           ports:
-            - containerPort: 80
+            - containerPort: 3000
 ---
