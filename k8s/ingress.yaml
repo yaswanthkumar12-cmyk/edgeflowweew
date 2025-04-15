@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: 127.0.0.1:55834  # Replace with your own nip.io subdomain
+    - host: 127.0.0.1.nip.io   # Valid DNS hostname (nip.io will resolve to 127.0.0.1)
       http:
         paths:
           - path: /
@@ -15,4 +15,4 @@ spec:
               service:
                 name: react-app-service
                 port:
-                  number: 80
+                  number: 3000   # Use your exposed service port (not 55834)
