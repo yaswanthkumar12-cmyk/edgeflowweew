@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: kubernetes.docker.internal
+    - host: 127.0.0.1.nip.io  # Replace with your own nip.io subdomain
       http:
         paths:
           - path: /
